@@ -1,0 +1,197 @@
+  {% extends "blog/base.html" %}
+  {% load static %}
+
+    {% block content %}
+    
+<style>
+  .card {
+    background: #2e363426;
+    border: 1px solid #dd2476;
+    color: rgb(40 25 25 / 80%)
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    border: 5px solid;
+    border-image-slice: 1;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: black !important;
+    border-image-source:  var(--gradient) !important; 
+    text-decoration: black;
+    transition: all .4s ease;
+  }
+  
+  .btn:hover, .btn:focus {
+    background: var(--gradient) !important;
+    -webkit-background-clip: none !important;
+    -webkit-text-fill-color: black !important;
+    border: 5px solid black !important; 
+    box-shadow: #222 1px 0 10px;
+    text-decoration: underline;
+  }
+
+
+</style>
+
+
+
+    <!--Inicio do Carousel-->
+
+
+
+<div id="gallery" class="carousel slide carousel-fade" data-ride="carousel" data-aos="fade-up" data-aos-delay="300">
+  
+
+      <ul class="carousel-indicators" >
+        <li data-target="#gallery" data-slide-to="0" class="active"></li>
+        <li data-target="#gallery" data-slide-to="1"></li>
+        <li data-target="#gallery" data-slide-to="2"></li>
+      </ul>
+
+      <div class="carousel-inner">
+         {% for img in carousel %} 
+          {% if forloop.last %}
+        <div class="carousel-item active" >
+          {% else %}
+                <div class="carousel-item  ">
+            {% endif %}
+          <img src="{{img.Image.url}}" class="rounded mx-auto d-block" width="937" height="460" alt="...">
+          <div class="carousel-caption d-none d-md-block rounded position-absolute bg-custom">
+              <h5>{{img.Img_title}}</h5>
+              <p>{{img.Img_desc}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+</div> 
+
+<!--Fim do Carousel-->
+    
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          {% for post in posts %}
+
+           <div class="col-md-4">
+
+               <a class="text-dark" href="{{post.get_absolute_url}}">
+              <div class="card border-0" id="card1">
+                <img class="rounded" alt="Responsive image" width="120px" height="100px" margin="10px" src="{{post.image.url}}" alt="{{ post.title }}">
+                <div class="card-body">
+                  <h2 style="font-size:18px;font-weight:bold">{{post.title|truncatechars:50}}</h2>
+                  <p class="card-text">{{post.text_introduction|truncatechars:50}}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">{{post.publish}}</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+                                          
+
+<!--                  <a href="{{post.get_absolute_url}}" class="photo">
+                  <h1>{{post.title|truncatechars:50}}</h1>
+                    <img src="{{post.image.url}}" />
+                  <div class="glow-wrap">
+                    <i class="glow"></i>
+                  </div>
+                  </a>
+
+
+                  <a href="http://tiagoalexandrelopes.com/" target="_blank" id="author">About me</a>
+                </div>    
+            
+
+          <div class="col-md-4">
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+          <a class="text-dark" href="{{post.get_absolute_url}}">
+          <div class="card-header">{{post.title|truncatechars:50}}</div>
+          <img class="rounded mx-auto d-block" alt="Responsive image" width="120px" height="100px" margin="10px" src="{{post.image.url}}" alt="{{ post.title }}">
+          <div class="card-body">
+          <h5 class="card-title">Categoria: {{post.category|truncatechars:50}}</h5>
+          <p class="font-italic">{{post.excerpt|truncatechars:50}}</p></div>
+          </a>
+        </div>
+            <a class="text-dark" href="{{post.get_absolute_url}}">
+              <div class="card border-0" id="card1">
+                <img class="rounded" alt="Responsive image" width="120px" height="100px" margin="10px" src="{{post.image.url}}" alt="{{ post.title }}">
+                <div class="card-body">
+                  <h2 style="font-size:18px;font-weight:bold">{{post.title|truncatechars:50}}</h2>
+                  <p class="card-text">{{post.excerpt|truncatechars:50}}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+
+
+
+                <div class="col-md-4">               
+                  <div class="card text-white bg-info mb-3" style="width: 18rem;"> 
+                    <a href="{{post.get_absolute_url}}" class="text-dark"><i class="fas fa-link">
+                    <img src="{{post.image.url}}" class="card-img-top" width="80px" height="180px" margin="10px" alt="{{ post.title }}">
+                      <div class="card-body">
+                        <h5 class="card-title">{{post.title|truncatechars:50}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{post.excerpt|truncatechars:50}}</h6>
+                        <p class="card-text">Categoria: {{post.category|truncatechars:50}}</p>                        
+                      </div>
+                      Visit Site</a>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          -->
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+        {% for post in posts %}
+
+        
+
+      {% endfor %}
+
+    {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<h1>My Blog of Raptors</h1>
+	<ul>
+		{% for post in posts %}
+				<li><a href="{% url 'article-detail' post.pk %}"> {{ post.title }}
+					</a>  - {{ post.author}}
+					<br/> 
+					{{ post.body }}
+				</li>
+				{% load static %}
+					<div class="bg-light"><img class="img-fluid mx-auto d-block" width="200px" alt="Responsive image"
+                  src="{{ post.image.url }}"> </div>
+		{% endfor %}
+	</ul>

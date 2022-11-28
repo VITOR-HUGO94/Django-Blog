@@ -1,0 +1,178 @@
+/* Bootstrap Over-ride */
+.img-fluid. {
+  max-width: 100%;
+  height: auto;
+}
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+
+
+
+
+@media (min-width: 1000px){
+    .container{
+        max-width: 1000px;
+    }
+}
+@media (max-width: 1200px){
+    .container{
+        max-width: 100%;
+        padding:0 24px;
+    }
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu{
+    top:58px;
+    left:0px;
+    padding:10px;
+}
+
+.alert-primary{
+    background-color: #E4F1FF;
+}
+
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+html, body, p, div{
+    letter-spacing: -0.02px;
+    font-family: 'Roboto', sans-serif;
+}
+.fs12{
+    font-size: 12px;
+}
+.fs15{
+    font-size: 0.9375rem;
+}
+
+.fw300{
+    font-weight: 300;
+}
+.fw500{
+    font-weight: 500;
+}
+
+
+/* Navigation-Main*/
+
+/* xs */
+.logo {
+    width: 49px;
+    height: auto;
+}
+/* sm */
+@media (min-width: 768px) {
+    .logo {
+        width: 49px;
+    }
+}
+/* md */
+@media (min-width: 992px) {
+    .logo {
+        width: 60px;
+    }
+}
+/* lg */
+@media (min-width: 1200px) {
+    .logo {
+        width: 70px;
+    }
+}
+
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+.footer > div > div > ul > li{
+    padding-bottom:8px;
+}
+
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+} 
