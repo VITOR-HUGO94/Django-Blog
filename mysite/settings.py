@@ -26,19 +26,19 @@ SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://django-server-production-64e2.up.railway.app","https://django-server-production-64e2.up.railway.app/admin/"]
+ALLOWED_HOSTS = ["https://*"]
 #CSRF_TRUSTED_ORIGINS= ["https://django-server-production-64e2.up.railway.app/"]
 #CSRF_COOKIE_SECURE = True
 
 # Whether to use a secure cookie for the CSRF cookie
 # https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-secure
-#CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # The value of the SameSite flag on the CSRF cookie
 # https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-samesite
-#CSRF_COOKIE_SAMESITE = 'Strict'
+CSRF_COOKIE_SAMESITE = 'Strict'
 
-#CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS.copy()
+CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS.copy()
 
 
 
