@@ -32,13 +32,13 @@ ALLOWED_HOSTS = ["https://django-server-production-64e2.up.railway.app","https:/
 
 # Whether to use a secure cookie for the CSRF cookie
 # https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-secure
-CSRF_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
 
 # The value of the SameSite flag on the CSRF cookie
 # https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-samesite
-CSRF_COOKIE_SAMESITE = 'Strict'
+#CSRF_COOKIE_SAMESITE = 'Strict'
 
-CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS.copy()
+#CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS.copy()
 
 
 
