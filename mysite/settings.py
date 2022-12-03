@@ -41,7 +41,7 @@ ALLOWED_HOSTS = ["*"]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#csrf-cookie-samesite
 #CSRF_COOKIE_SAMESITE = 'Strict'
 
-CSRF_TRUSTED_ORIGINS = ["*"]
+#CSRF_TRUSTED_ORIGINS = ["*"]
 
 
 
@@ -95,11 +95,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-
-       
-
-    
-
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
 
