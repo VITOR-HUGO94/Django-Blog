@@ -80,22 +80,22 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': 'dev1',
-        'PASSWORD': 'dev1@123',
-        'HOST': 'db',
-        'PORT': '5432',
+        #'ENGINE': 'django.db.backends.postgresql',
+        #'NAME': 'blog',
+        #'USER': 'postgres',
+        #'PASSWORD': 'postgres',
+        #'HOST': 'localhost',
+        #'PORT': '5432',
 
 
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        #'NAME': os.environ["PGDATABASE"],
-        #'USER': os.environ["PGUSER"],
-        #'PASSWORD': os.environ["PGPASSWORD"],
-        #'HOST': os.environ["PGHOST"],
-        #'PORT': os.environ["PGPORT"],
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ["PGDATABASE"],
+        'USER': os.environ["PGUSER"],
+        'PASSWORD': os.environ["PGPASSWORD"],
+        'HOST': os.environ["PGHOST"],
+        'PORT': os.environ["PGPORT"],
     }
 }
 
