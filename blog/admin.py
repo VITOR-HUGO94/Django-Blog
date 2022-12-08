@@ -8,7 +8,8 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display = ('title', 'id', 'status', 'slug', 'author')
     prepopulated_fields = {'slug': ('title',), }
 
+@csrf_protect
+@admin.site.register(models.Category)
 
-admin.site.register(models.Category)
-
-admin.site.register(models.Carousel)
+@csrf_protect
+@admin.site.register(models.Carousel)

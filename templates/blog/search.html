@@ -50,6 +50,7 @@
     {% else %}
     <h1>Search for posts</h1>
     <form method="get">
+        {% csrf_token %}
         {{ form.as_p }}
         <input class="btn btn-primary my-1" type="submit" value="Search">
     </form>
