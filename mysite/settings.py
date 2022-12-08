@@ -27,13 +27,13 @@ DEBUG = True
 
 
 CSRF_TRUSTED_ORIGINS = [
-    '*'
+    'https://django-server-production-64e2.up.railway.app/'
 ],
 ALLOWED_HOSTS = [
     '*',
 ],
 CORS_ORIGIN_WHITELIST = [
-    '*',
+    'https://django-server-production-64e2.up.railway.app/',
 ]
 
 
