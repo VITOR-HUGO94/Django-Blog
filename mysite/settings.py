@@ -26,7 +26,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
-CSRF_TRUSTED_ORIGINS = ['https://django-server-production-64e2.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://django-server-production-64e2.up.railway.app/','https://django-server-production-64e2.up.railway.app/admin/login/?next=/admin/']
 #ALLOWED_HOSTS = [
 #    '*',
 #],
