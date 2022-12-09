@@ -6,6 +6,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+CSRF_TRUSTED_ORIGINS = ['https://django-blog--e67d.up.railway.app/']
 
 import os
 from pathlib import Path
@@ -26,7 +27,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
-CSRF_TRUSTED_ORIGINS = ['http://django-blog--e67d.up.railway.app/']
 #ALLOWED_HOSTS = [
 #    '*',
 #],
