@@ -12,4 +12,5 @@ class AuthorAdmin(admin.ModelAdmin):
 @admin.site.register(models.Category)
 
 @csrf_protect
-@admin.site.register(models.Carousel)
+
+admin.site.register(models.Carousel)
