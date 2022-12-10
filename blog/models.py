@@ -86,8 +86,8 @@ class Comment(MPTTModel):
 
 class Carousel(models.Model):
     Image = models.ImageField(upload_to='Carousel', null = True)
-    Img_title = models.CharField(max_length=30, null=True)
-    Img_desc = models.CharField(max_length=500, null=True)
+    #Img_title = models.CharField(max_length=30, null=True)
+    #Img_desc = models.CharField(max_length=500, null=True)
     date_created = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
