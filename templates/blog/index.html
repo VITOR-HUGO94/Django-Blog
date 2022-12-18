@@ -31,8 +31,6 @@
   }
 
 
-
-
 </style>
 
 
@@ -41,25 +39,30 @@
 
 
 
-<div id="gallery" class="carousel slide w-100" data-ride="carousel" data-aos="fade-up" data-aos-delay="300">
+<div id="gallery" class="carousel slide carousel-fade" data-ride="carousel" data-aos="fade-up" data-aos-delay="300">
+  
+
+      <ul class="carousel-indicators" >
+        <li data-target="#gallery" data-slide-to="0" class="active"></li>
+        <li data-target="#gallery" data-slide-to="1"></li>
+        <li data-target="#gallery" data-slide-to="2"></li>
+      </ul>
 
       <div class="carousel-inner">
-          {% for img in carousel %}
+         {% for img in carousel %} 
           {% if forloop.last %}
         <div class="carousel-item active" >
           {% else %}
                 <div class="carousel-item  ">
             {% endif %}
-          <img src="{{img.Image.url}}" class="img-fluid" width="937" height="460" alt="...">
+          <img src="{{img.Image.url}}" class="rounded mx-auto d-block" width="937" height="460" alt="...">
           <div class="carousel-caption d-none d-md-block rounded position-absolute bg-custom">
  
           </div>
         </div>
-        
+        {% endfor %}
       </div>
-      {% endfor %} 
-    </div> 
-
+</div> 
 
 <!--Fim do Carousel-->
     
@@ -83,6 +86,75 @@
               </div>
             </a>
           </div>
+                                          
+
+<!--                  <a href="{{post.get_absolute_url}}" class="photo">
+                  <h1>{{post.title|truncatechars:50}}</h1>
+                    <img src="{{post.image.url}}" />
+                  <div class="glow-wrap">
+                    <i class="glow"></i>
+                  </div>
+                  </a>
+
+
+                  <a href="http://tiagoalexandrelopes.com/" target="_blank" id="author">About me</a>
+                </div>    
+            
+
+          <div class="col-md-4">
+          <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+          <a class="text-dark" href="{{post.get_absolute_url}}">
+          <div class="card-header">{{post.title|truncatechars:50}}</div>
+          <img class="rounded mx-auto d-block" alt="Responsive image" width="120px" height="100px" margin="10px" src="{{post.image.url}}" alt="{{ post.title }}">
+          <div class="card-body">
+          <h5 class="card-title">Categoria: {{post.category|truncatechars:50}}</h5>
+          <p class="font-italic">{{post.excerpt|truncatechars:50}}</p></div>
+          </a>
+        </div>
+            <a class="text-dark" href="{{post.get_absolute_url}}">
+              <div class="card border-0" id="card1">
+                <img class="rounded" alt="Responsive image" width="120px" height="100px" margin="10px" src="{{post.image.url}}" alt="{{ post.title }}">
+                <div class="card-body">
+                  <h2 style="font-size:18px;font-weight:bold">{{post.title|truncatechars:50}}</h2>
+                  <p class="card-text">{{post.excerpt|truncatechars:50}}</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">9 mins</small>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+
+
+
+
+                <div class="col-md-4">               
+                  <div class="card text-white bg-info mb-3" style="width: 18rem;"> 
+                    <a href="{{post.get_absolute_url}}" class="text-dark"><i class="fas fa-link">
+                    <img src="{{post.image.url}}" class="card-img-top" width="80px" height="180px" margin="10px" alt="{{ post.title }}">
+                      <div class="card-body">
+                        <h5 class="card-title">{{post.title|truncatechars:50}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{post.excerpt|truncatechars:50}}</h6>
+                        <p class="card-text">Categoria: {{post.category|truncatechars:50}}</p>                        
+                      </div>
+                      Visit Site</a>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          -->
           {% endfor %}
         </div>
       </div>
